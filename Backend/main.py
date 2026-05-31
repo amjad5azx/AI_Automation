@@ -132,9 +132,3 @@ async def health():
 @app.get("/providers")
 async def list_providers():
     return {"providers": list(PROVIDER_MODELS.keys()), "models": PROVIDER_MODELS}
-
-
-# ── Dev server ─────────────────────────────────────────────────────────────────
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8001, reload=True)
